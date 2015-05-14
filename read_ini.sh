@@ -272,7 +272,7 @@ function read_ini()
 		VAL="${VAL//\\/\\\\}"
 		VAL="\$'${VAL//\'/\'}'"
 
-		eval "$VARNAME=$VAL"
+		eval "$VARNAME=\"$VAL\""
 	done  <"${INI_FILE}"
 	
 	# return also the number of parsed sections
